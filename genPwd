@@ -21,4 +21,4 @@ genPwd <- function(len=8, special=2){
 }
 
 # generate a password
-genPwd()
+print(genPwd())
