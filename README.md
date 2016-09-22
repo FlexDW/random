@@ -1,2 +1,2 @@
 # random
-Random code snippits
+Random code snippits.
