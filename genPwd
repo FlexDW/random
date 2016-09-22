@@ -12,8 +12,8 @@ genPwd <- function(len=8, special=2){
     pwd <- sample(c(A, B, C, D), size=len)
   }else if(special==2){
     pwd <- c()
-    while(!any(A %in% pw) | !any(B %in% pw) | 
-            !any(C %in% pw) | !any(D %in% pw)){
+    while(!any(A %in% pwd) | !any(B %in% pwd) | 
+            !any(C %in% pwd) | !any(D %in% pwd)){
       pwd <- sample(c(A, B, C, D), size=len)
     }
   }
