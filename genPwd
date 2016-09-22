@@ -1,0 +1,24 @@
+genPwd <- function(len=8, special=2){
+# Random password generator.
+
+  A <- 0:9
+  B <- letters[1:26]
+  C <- LETTERS[1:26]
+  D <- c("!", "@", "#", "$", "%", "&")
+  
+  if(special==0){
+    pwd <- sample(c(A, B, C), size=len)
+  }else if(special==1){
+    pwd <- sample(c(A, B, C, D), size=len)
+  }else if(special==2){
+    pwd <- c()
+    while(!any(A %in% pw) | !any(B %in% pw) | 
+            !any(C %in% pw) | !any(D %in% pw)){
+      pwd <- sample(c(A, B, C, D), size=len)
+    }
+  }
+  return(paste(pwd, collapse=""))
+}
+
+# generate a password
+genPwd()
