@@ -1,0 +1,15 @@
+sparseCor <- function(x){
+    n <- nrow(x)
+    cMeans <- colMeans(x)
+    covmat <- (as.matrix(crossprod(x)) - n*tcrossprod(cMeans))/(n-1)
+    sdvec <- sqrt(diag(covmat)) 
+    cormat <- covmat/tcrossprod(sdvec)
+    return(cormat)
+}
+
+sparseCov <- function(x){
+    n <- nrow(x)
+    cMeans <- colMeans(x)
+    covmat <- (as.matrix(crossprod(x)) - n*tcrossprod(cMeans))/(n-1)
+    return(covmat)
+}
