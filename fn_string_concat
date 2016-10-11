@@ -1,9 +1,0 @@
-"%+%" = function(x, y) {
-# String concatenation operator... f!@#k paste()
-  if(is.character(x) & is.character(y)) {
-    return(paste(x , y, sep=""))
-  } else {
-    warning("One or more of the arguments coerced to character", call. = TRUE, immediate. = FALSE, noBreaks. = FALSE, domain = NULL)
-    return(paste(as.character(x) , as.character(y), sep=""))    
-  }
-}
