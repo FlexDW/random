@@ -1,4 +1,4 @@
-genPwd <- function(len=8, special=2){
+genPwd <- function(len=10, special=2){
 # Random password generator.
 
   A <- 0:9
