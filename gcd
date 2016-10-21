@@ -1,0 +1,6 @@
+gcd <- function(x, y) {
+# returns greatest common divisor of x and y
+  r <- x%%y;
+  return(ifelse(r, gcd(y, r), y))
+}
+
